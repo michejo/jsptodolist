@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <title>ToDoList</title>
+    <h1>To do list for everyday use!</h1>
+</head>
+
+<body>
+    <div class="alusta">
+        <input type="text" placeholder="What needs to be done!" id="inputti"> 
+        <button id="painike" onclick="toDoMore()" >Do this!</button>
+    </div>
+
+    <ul id="lista">
+    </ul>
+
+    <script>
+
+        //This one will add line throught text when to do is done
+        var tehty = document.querySelector("ul");
+
+        tehty.addEventListener('click', function(klikki) {
+            if (klikki.target.tagName === 'LI'){
+                klikki.target.classList.toggle('didIT');
+            } 
+        }, false);
+    </script>
+</body>
+</html>
